@@ -8,6 +8,6 @@ Note: all function colour parameters should be in hexadecimal in with format "#X
 
 ## Algorithm
 
-The function make_colour_palette essentially treats the three parts of the colour (i.e. r, g, b) as variables and shuffles them around. It then creates a list of all the different combinations. (e.g. input: '#4D80CD', output: ['#4D80CD', '#4DCD80', '#804DCD', '#80CD4D', '#CD4D80', '#CD804D']. 
+The function make_colour_palette essentially treats the three parts of the colour (i.e. r, g, b) as variables and shuffles them around. It then creates a list of all the different combinations. (e.g. input: `'#4D80CD'`, output: `['#4D80CD', '#4DCD80', '#804DCD', '#80CD4D', '#CD4D80', '#CD804D']`. 
 
-The function `sync_brightness` takes each of these colours and compares their apparent brightness to the source colour (in this case '#4D80CD') (it uses the formula $b = \frac{0.299r + 0.587g + 0.114b}{255}$, where $b$ is the brightness $a$, $b$, and $c$ are the colour's rbg values; this is because this is approximately how the human eye weights the brightness of red, green, and blue). It then normalises the other colours in make_colour_palette's array to all have the same brightless as the source colour.
+The function `sync_brightness` takes each of these colours and compares their apparent brightness to the source colour. (It uses the formula $b = \frac{0.299r + 0.587g + 0.114b}{255}$, where $b$ is the brightness $a$, $b$, and $c$ are the colour's rgb values; this is because this is approximately how the human eye weights the brightness of red, green, and blue.) It then normalises the other colours in make_colour_palette's array to all have the same brightness as the source colour.
