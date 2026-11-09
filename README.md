@@ -1,4 +1,4 @@
-# colour-palette
+# colour_palette_generator
 
 ## Overview
 
